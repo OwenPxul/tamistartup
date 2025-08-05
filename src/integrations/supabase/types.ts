@@ -16,31 +16,49 @@ export type Database = {
     Tables: {
       profiles: {
         Row: {
+          company_name: string | null
           created_at: string
+          description: string | null
           email: string
           full_name: string | null
           id: string
+          location: string | null
+          phone: string | null
           role: Database["public"]["Enums"]["user_role"]
+          specialties: string[] | null
           updated_at: string
           user_id: string
+          website: string | null
         }
         Insert: {
+          company_name?: string | null
           created_at?: string
+          description?: string | null
           email: string
           full_name?: string | null
           id?: string
+          location?: string | null
+          phone?: string | null
           role: Database["public"]["Enums"]["user_role"]
+          specialties?: string[] | null
           updated_at?: string
           user_id: string
+          website?: string | null
         }
         Update: {
+          company_name?: string | null
           created_at?: string
+          description?: string | null
           email?: string
           full_name?: string | null
           id?: string
+          location?: string | null
+          phone?: string | null
           role?: Database["public"]["Enums"]["user_role"]
+          specialties?: string[] | null
           updated_at?: string
           user_id?: string
+          website?: string | null
         }
         Relationships: []
       }
