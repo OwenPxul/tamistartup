@@ -26,7 +26,7 @@ const Navigation = () => {
             </div>
             <Button variant="outline" size="sm" onClick={signOut} className="gap-2">
               <LogOut className="h-4 w-4" />
-              Sign Out
+              Cerrar Sesión
             </Button>
           </div>
         </div>

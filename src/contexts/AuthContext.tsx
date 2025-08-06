@@ -111,10 +111,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return { error };
       }
 
-      toast.success('Account created successfully! Please check your email to verify your account.');
+      toast.success('¡Cuenta creada exitosamente! Revisa tu correo para verificar tu cuenta.');
       return { error: null };
     } catch (error: any) {
-      toast.error('An unexpected error occurred');
+      toast.error('Ocurrió un error inesperado');
       return { error };
     }
   };
@@ -131,10 +131,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return { error };
       }
 
-      toast.success('Signed in successfully!');
+      toast.success('¡Sesión iniciada exitosamente!');
       return { error: null };
     } catch (error: any) {
-      toast.error('An unexpected error occurred');
+      toast.error('Ocurrió un error inesperado');
       return { error };
     }
   };
@@ -145,11 +145,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (error) {
         toast.error(error.message);
       } else {
-        toast.success('Signed out successfully');
+        toast.success('Sesión cerrada exitosamente');
         navigate('/');
       }
     } catch (error) {
-      toast.error('An unexpected error occurred');
+      toast.error('Ocurrió un error inesperado');
     }
   };
 

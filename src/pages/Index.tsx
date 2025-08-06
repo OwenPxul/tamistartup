@@ -19,7 +19,7 @@ const Index = () => {
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-muted-foreground">Loading...</p>
+          <p className="mt-4 text-muted-foreground">Cargando...</p>
         </div>
       </div>
     );
@@ -32,35 +32,35 @@ const Index = () => {
           TAMI Marketplace
         </h1>
         <p className="text-xl text-muted-foreground mb-8">
-          Connect entrepreneurs with suppliers worldwide. Find the perfect match for your business needs.
+          Conecta emprendedores con proveedores especializados. Encuentra la combinación perfecta para tu negocio.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">
-            <Link to="/auth">Get Started</Link>
+            <Link to="/auth">Comenzar</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <Link to="/auth">Sign In</Link>
+            <Link to="/auth">Iniciar Sesión</Link>
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-left">
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">For Entrepreneurs</h3>
+            <h3 className="text-lg font-semibold">Para Emprendedores</h3>
             <ul className="text-muted-foreground space-y-1 text-sm">
-              <li>• Find suppliers by niche categories</li>
-              <li>• Send product/service requests</li>
-              <li>• Track order history</li>
-              <li>• Direct communication with suppliers</li>
+              <li>• Encuentra proveedores por categorías especializadas</li>
+              <li>• Envía solicitudes de productos/servicios</li>
+              <li>• Rastrea tu historial de pedidos</li>
+              <li>• Comunicación directa con proveedores</li>
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">For Suppliers</h3>
+            <h3 className="text-lg font-semibold">Para Proveedores</h3>
             <ul className="text-muted-foreground space-y-1 text-sm">
-              <li>• Manage product catalog</li>
-              <li>• Respond to requests</li>
-              <li>• View analytics and insights</li>
-              <li>• Connect with entrepreneurs</li>
+              <li>• Gestiona tu catálogo de productos</li>
+              <li>• Responde a solicitudes</li>
+              <li>• Ve analíticas e insights</li>
+              <li>• Conecta con emprendedores</li>
             </ul>
           </div>
         </div>

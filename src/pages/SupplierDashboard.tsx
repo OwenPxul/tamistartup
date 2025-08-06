@@ -8,65 +8,65 @@ const SupplierDashboard = () => {
     {
       id: "#REQ-001",
       entrepreneur: "Green Eats Co.",
-      product: "Biodegradable Food Containers",
-      quantity: "500 units",
+      product: "Contenedores Biodegradables para Alimentos",
+      quantity: "500 unidades",
       budget: "$400-500",
-      deadline: "2 weeks",
-      status: "New"
+      deadline: "2 semanas",
+      status: "Nuevo"
     },
     {
       id: "#REQ-002", 
       entrepreneur: "Artisan Bakery",
-      product: "Organic Spice Mix",
+      product: "Mezcla de Especias Orgánicas",
       quantity: "10kg",
       budget: "$200-300",
-      deadline: "1 week",
-      status: "Pending"
+      deadline: "1 semana",
+      status: "Pendiente"
     },
     {
       id: "#REQ-003",
       entrepreneur: "Boutique Foods",
-      product: "Custom Product Labels",
-      quantity: "1000 labels",
+      product: "Etiquetas Personalizadas para Productos",
+      quantity: "1000 etiquetas",
       budget: "$800-1200",
-      deadline: "3 weeks",
-      status: "Responded"
+      deadline: "3 semanas",
+      status: "Respondido"
     }
   ];
 
   const analytics = {
     totalViews: 1247,
     responseRate: 85,
-    avgResponseTime: "2.4 hours",
+    avgResponseTime: "2.4 horas",
     monthlyRevenue: "$4,230"
   };
 
   const products = [
     {
       id: 1,
-      name: "Biodegradable Food Containers",
-      category: "Packaging",
-      price: "$0.85/unit",
-      stock: "2,500 units",
-      status: "Active",
+      name: "Contenedores Biodegradables para Alimentos",
+      category: "Empaques",
+      price: "$0.85/unidad",
+      stock: "2,500 unidades",
+      status: "Activo",
       views: 324
     },
     {
       id: 2,
-      name: "Organic Spice Collection",
-      category: "Ingredients", 
+      name: "Colección de Especias Orgánicas",
+      category: "Ingredientes", 
       price: "$24.99/kg",
       stock: "150 kg",
-      status: "Active",
+      status: "Activo",
       views: 198
     },
     {
       id: 3,
-      name: "Custom Product Labels",
-      category: "Decoration",
-      price: "$1.20/label",
-      stock: "5,000 labels",
-      status: "Draft",
+      name: "Etiquetas Personalizadas para Productos",
+      category: "Decoración",
+      price: "$1.20/etiqueta",
+      stock: "5,000 etiquetas",
+      status: "Borrador",
       views: 0
     }
   ];
@@ -77,12 +77,12 @@ const SupplierDashboard = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-foreground">Supplier Dashboard</h1>
-            <p className="text-muted-foreground">Manage your products and connect with entrepreneurs</p>
+            <h1 className="text-3xl font-bold text-foreground">Panel del Proveedor</h1>
+            <p className="text-muted-foreground">Gestiona tus productos y conecta con emprendedores</p>
           </div>
           <Button className="gap-2">
             <Plus className="h-4 w-4" />
-            Add New Product
+            Agregar Nuevo Producto
           </Button>
         </div>
 
@@ -90,45 +90,45 @@ const SupplierDashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Profile Views</CardTitle>
+              <CardTitle className="text-sm font-medium">Vistas del Perfil</CardTitle>
               <Eye className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{analytics.totalViews}</div>
-              <p className="text-xs text-muted-foreground">+12% from last month</p>
+              <p className="text-xs text-muted-foreground">+12% vs mes anterior</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Response Rate</CardTitle>
+              <CardTitle className="text-sm font-medium">Tasa de Respuesta</CardTitle>
               <MessageSquare className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{analytics.responseRate}%</div>
-              <p className="text-xs text-muted-foreground">+5% from last month</p>
+              <p className="text-xs text-muted-foreground">+5% vs mes anterior</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Avg Response Time</CardTitle>
+              <CardTitle className="text-sm font-medium">Tiempo Promedio de Respuesta</CardTitle>
               <Calendar className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{analytics.avgResponseTime}</div>
-              <p className="text-xs text-muted-foreground">-30 min from last month</p>
+              <p className="text-xs text-muted-foreground">-30 min vs mes anterior</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Monthly Revenue</CardTitle>
+              <CardTitle className="text-sm font-medium">Ingresos Mensuales</CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{analytics.monthlyRevenue}</div>
-              <p className="text-xs text-muted-foreground">+18% from last month</p>
+              <p className="text-xs text-muted-foreground">+18% vs mes anterior</p>
             </CardContent>
           </Card>
         </div>
@@ -139,11 +139,11 @@ const SupplierDashboard = () => {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5" />
-                Entrepreneur Requests
+                Solicitudes de Emprendedores
               </CardTitle>
-              <CardDescription>Respond to requests from entrepreneurs looking for your products</CardDescription>
+              <CardDescription>Responde a solicitudes de emprendedores que buscan tus productos</CardDescription>
             </div>
-            <Button variant="outline">View All Requests</Button>
+            <Button variant="outline">Ver Todas las Solicitudes</Button>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -152,10 +152,10 @@ const SupplierDashboard = () => {
                   <div className="space-y-2">
                     <div className="flex items-center gap-3">
                       <p className="font-medium text-foreground">{request.id}</p>
-                      <Badge 
+                       <Badge 
                         variant={
-                          request.status === "New" ? "destructive" : 
-                          request.status === "Responded" ? "default" : "secondary"
+                          request.status === "Nuevo" ? "destructive" : 
+                          request.status === "Respondido" ? "default" : "secondary"
                         }
                       >
                         {request.status}
@@ -164,13 +164,13 @@ const SupplierDashboard = () => {
                     <p className="text-sm font-medium">{request.entrepreneur}</p>
                     <p className="text-sm text-muted-foreground">{request.product}</p>
                     <div className="flex gap-4 text-xs text-muted-foreground">
-                      <span>Qty: {request.quantity}</span>
-                      <span>Budget: {request.budget}</span>
-                      <span>Deadline: {request.deadline}</span>
+                      <span>Cant: {request.quantity}</span>
+                      <span>Presupuesto: {request.budget}</span>
+                      <span>Fecha límite: {request.deadline}</span>
                     </div>
                   </div>
                   <Button size="sm">
-                    {request.status === "New" ? "Respond" : "View"}
+                    {request.status === "Nuevo" ? "Responder" : "Ver"}
                   </Button>
                 </div>
               ))}
@@ -184,13 +184,13 @@ const SupplierDashboard = () => {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Package className="h-5 w-5" />
-                Product Catalog
+                Catálogo de Productos
               </CardTitle>
-              <CardDescription>Manage your current product offerings</CardDescription>
+              <CardDescription>Gestiona tus ofertas de productos actuales</CardDescription>
             </div>
             <Button className="gap-2">
               <Plus className="h-4 w-4" />
-              Add Product
+              Agregar Producto
             </Button>
           </CardHeader>
           <CardContent>
@@ -202,25 +202,25 @@ const SupplierDashboard = () => {
                       <h3 className="font-medium text-foreground">{product.name}</h3>
                       <Badge variant="secondary">{product.category}</Badge>
                       <Badge 
-                        variant={product.status === "Active" ? "default" : "outline"}
+                        variant={product.status === "Activo" ? "default" : "outline"}
                       >
                         {product.status}
                       </Badge>
                     </div>
                     <div className="flex gap-4 text-sm text-muted-foreground">
-                      <span>Price: {product.price}</span>
+                      <span>Precio: {product.price}</span>
                       <span>Stock: {product.stock}</span>
-                      <span>Views: {product.views}</span>
+                      <span>Vistas: {product.views}</span>
                     </div>
                   </div>
                   <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="gap-2">
                       <Eye className="h-4 w-4" />
-                      View
+                      Ver
                     </Button>
                     <Button variant="outline" size="sm" className="gap-2">
                       <Edit className="h-4 w-4" />
-                      Edit
+                      Editar
                     </Button>
                   </div>
                 </div>

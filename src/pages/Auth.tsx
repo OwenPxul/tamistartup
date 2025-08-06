@@ -61,34 +61,34 @@ const Auth = () => {
           <Button variant="ghost" size="sm" asChild>
             <Link to="/">
               <ArrowLeft className="h-4 w-4" />
-              Back to Home
+              Volver al Inicio
             </Link>
           </Button>
         </div>
 
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold">Welcome to TAMI</h1>
-          <p className="text-muted-foreground">Connect entrepreneurs with suppliers</p>
+          <h1 className="text-3xl font-bold">Bienvenido a TAMI</h1>
+          <p className="text-muted-foreground">Conecta emprendedores con proveedores</p>
         </div>
 
         <Tabs defaultValue="signin" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="signin">Sign In</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            <TabsTrigger value="signin">Iniciar Sesión</TabsTrigger>
+            <TabsTrigger value="signup">Registrarse</TabsTrigger>
           </TabsList>
 
           <TabsContent value="signin">
             <Card>
               <CardHeader>
-                <CardTitle>Sign In</CardTitle>
+                <CardTitle>Iniciar Sesión</CardTitle>
                 <CardDescription>
-                  Enter your email and password to access your account
+                  Ingresa tu email y contraseña para acceder a tu cuenta
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSignIn} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signin-email">Email</Label>
+                    <Label htmlFor="signin-email">Correo Electrónico</Label>
                     <Input
                       id="signin-email"
                       type="email"
@@ -99,7 +99,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signin-password">Password</Label>
+                    <Label htmlFor="signin-password">Contraseña</Label>
                     <Input
                       id="signin-password"
                       type="password"
@@ -110,7 +110,7 @@ const Auth = () => {
                     />
                   </div>
                   <Button type="submit" className="w-full" disabled={isSubmitting || loading}>
-                    {isSubmitting ? 'Signing In...' : 'Sign In'}
+                    {isSubmitting ? 'Iniciando Sesión...' : 'Iniciar Sesión'}
                   </Button>
                 </form>
               </CardContent>
@@ -120,15 +120,15 @@ const Auth = () => {
           <TabsContent value="signup">
             <Card>
               <CardHeader>
-                <CardTitle>Create Account</CardTitle>
+                <CardTitle>Crear Cuenta</CardTitle>
                 <CardDescription>
-                  Join TAMI as an entrepreneur or supplier
+                  Únete a TAMI como emprendedor o proveedor
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSignUp} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email</Label>
+                    <Label htmlFor="signup-email">Correo Electrónico</Label>
                     <Input
                       id="signup-email"
                       type="email"
@@ -139,7 +139,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
+                    <Label htmlFor="signup-password">Contraseña</Label>
                     <Input
                       id="signup-password"
                       type="password"
@@ -151,7 +151,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-fullname">Full Name</Label>
+                    <Label htmlFor="signup-fullname">Nombre Completo</Label>
                     <Input
                       id="signup-fullname"
                       type="text"
@@ -162,7 +162,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-company">Company Name</Label>
+                    <Label htmlFor="signup-company">Nombre de la Empresa</Label>
                     <Input
                       id="signup-company"
                       type="text"
@@ -173,7 +173,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <Label>Account Type</Label>
+                    <Label>Tipo de Cuenta</Label>
                     <RadioGroup
                       value={signUpForm.role}
                       onValueChange={(value: 'entrepreneur' | 'supplier') => 
@@ -182,16 +182,16 @@ const Auth = () => {
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="entrepreneur" id="entrepreneur" />
-                        <Label htmlFor="entrepreneur">Entrepreneur - I need suppliers</Label>
+                        <Label htmlFor="entrepreneur">Emprendedor - Necesito proveedores</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="supplier" id="supplier" />
-                        <Label htmlFor="supplier">Supplier - I provide products/services</Label>
+                        <Label htmlFor="supplier">Proveedor - Ofrezco productos/servicios</Label>
                       </div>
                     </RadioGroup>
                   </div>
                   <Button type="submit" className="w-full" disabled={isSubmitting || loading}>
-                    {isSubmitting ? 'Creating Account...' : 'Create Account'}
+                    {isSubmitting ? 'Creando Cuenta...' : 'Crear Cuenta'}
                   </Button>
                 </form>
               </CardContent>
